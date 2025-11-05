@@ -58,6 +58,10 @@ header .header1 button {
 
 }
 
+header .header1 a {
+    text-decoration: none;
+}
+
 header .header1 button:hover {
     border-color: #fff;
     transition: 0.3s
