@@ -32,3 +32,20 @@ var swiper = new Swiper(".swiper", {
     }
   }
 });
+
+const btn = document.getElementById('button');
+
+document.getElementById('meu-formulario')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   const serviceID = 'service_gkaqrfo';
+   const templateID = 'template_2hx76cu';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      alert('Enviado com sucesso!');
+    }, (err) => {
+      alert(JSON.stringify(err));
+    });
+});
